@@ -20,9 +20,14 @@ const queryProducts = async (filter, options) => {
   return users;
 };
 
+const searchProducts = async (query) => {
+  const result = await Product.find({productDisplayName: new RegExp(query, 'i')})
+  return result;
+}
+
 
 const getProductById = async (id) => {
-  return Product.findById(id);
+  return Product.findOne({productId: Number(id)});
 };
 
 const updateProductById = async (userId, updateBody) => {
@@ -52,5 +57,6 @@ module.exports = {
   queryProducts,
   getProductById,
   updateProductById,
-  deleteProductById
+  deleteProductById,
+  searchProducts
 };

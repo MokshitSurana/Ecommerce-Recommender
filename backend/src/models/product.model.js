@@ -4,7 +4,7 @@ const { toJSON, paginate } = require('./plugins');
 const productSchema = mongoose.Schema(
   {
     productId: {
-      type: Number,
+      type: String,
       required: true,
     },
     productDisplayName: {
@@ -37,7 +37,6 @@ const productSchema = mongoose.Schema(
     seller: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
-      required: [true, 'A product must have a seller']
     },
     image: String,
 
@@ -46,6 +45,11 @@ const productSchema = mongoose.Schema(
 // add plugin that converts mongoose to json
 productSchema.plugin(toJSON);
 productSchema.plugin(paginate);
+
+productSchema.statics.isProductExists = async function (productId) {
+    const user = await this.findOne({ productId: `${productId}`});
+    return !!user;
+  };
 
 /**
  * @typedef Product

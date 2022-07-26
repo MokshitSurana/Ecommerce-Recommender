@@ -5,11 +5,8 @@ const router = express.Router();
 
 router
   .route('/')
-  .post(productController.createProduct)
-
-router
-  .route('/:id')
   .get(productController.getProduct)
+  .post(productController.createProduct)
   .patch(productController.updateProduct)
   .delete(productController.deleteProduct)
 
@@ -18,7 +15,11 @@ router
   .get(productController.getRecommendations)
 
 router
-  .route('/search/:productDisplayName')
-  .get(productController.getProducts)
+  .route('/search')
+  .get(productController.searchProduct)
+
+router
+    .route('/load-products')
+    .post(productController.loadProducts)
 
 module.exports = router;
