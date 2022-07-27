@@ -1,14 +1,25 @@
 from fastapi import FastAPI, HTTPException, Response
-import joblib
 import pandas as pd
 from sklearn.metrics.pairwise import pairwise_distances
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = ["http://localhost",
+"http://localhost:3000"]
 
 embed = pd.read_parquet('embeddings.parquet')
 cosine_sim = 1 - pairwise_distances(embed, metric='cosine')
 final_df = pd.read_csv('final_df.csv')
 indices = pd.Series(range(len(final_df)), index=final_df.index)
 
+
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 def get_recommender(idx, top_n=5):
     sim_idx    = indices[idx]

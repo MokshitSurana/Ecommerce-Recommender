@@ -1,0 +1,239 @@
+.home {
+  padding: 0;
+  position: relative;
+}
+
+.home .slide-container .slide {
+  min-height: calc(100vh - 9.5rem);
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 1.5rem;
+  padding: 0 9%;
+  flex-direction: row;
+}
+
+.home .slide-container .slide .content {
+  flex: 1 1 40rem;
+  animation: slideContent .5s linear 0.2s backwards;
+  font-size: 60%;
+}
+
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+}
+
+.home .slide-container .slide .image {
+  flex: 1 1 50rem;
+  padding-bottom: 15rem;
+  position: relative;
+  z-index: 0;
+}
+
+.home .slide-container .slide .image .shoe {
+  width: 65%;
+  /* transform: rotate(-35deg); */
+  animation: shoe .3s linear;
+  position: absolute;
+  right: 6rem;
+  top: -5rem;
+}
+
+@keyframes shoe {
+  0% {
+    transform: rotate(0deg) scale(.5);
+  }
+}
+
+.home .slide-container .slide .image .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: shoeText .5s linear .5s backwards;
+}
+
+@keyframes shoeText {
+  0% {
+    opacity: 0;
+    top: -10rem;
+  }
+}
+
+.home .slide-container .slide .content span {
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.home .slide-container .slide .content h3 {
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.home .slide-container .slide .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: .5rem 0;
+}
+
+.home .slide-container:nth-child(1) .slide {
+  background: url(../images/home-bg-1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .slide-container:nth-child(2) .slide {
+  background: url(../images/home-bg-2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .slide-container:nth-child(2) .slide .image .shoe{
+  transform: rotate(-35deg);
+}
+
+.home .slide-container:nth-child(3) .slide {
+  background: url(../images/home-bg-3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .slide-container {
+  display: none;
+}
+
+.home .slide-container.active {
+  display: block;
+}
+
+.home #prev,
+.home #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 100;
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border: .2rem solid var(--black);
+  cursor: pointer;
+  text-align: center;
+}
+
+.home #prev:hover,
+.home #next:hover {
+  color: var(--blue);
+}
+
+.home #prev {
+  left: 3rem;
+}
+
+.home #next {
+  right: 3rem;
+}
+
+.btn-add_to_cart {
+  font-size: 1rem;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0.2rem;
+  padding: 0.5rem 1.5rem;
+  transition: background 300ms ease;
+}
+
+.btn-add_to_cart:hover {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+}
+
+
+@media (max-width : 900px) {
+  .home .slide-container:nth-child(1) .slide {
+    background: url(../images/home-bg-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+  }
+
+  .home .slide-container:nth-child(2) .slide {
+    background: url(../images/home-bg-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+  }
+
+  .home .slide-container:nth-child(3) .slide {
+    background: url(../images/home-bg-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+  }
+
+  .home .slide-container .slide {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding: 0 1%;
+    flex-direction: column;
+  }
+
+
+  .home .slide-container .slide .image .shoe {
+    width: 65%;
+    position: static;
+  }
+
+  .home .slide-container .slide .content {
+    flex: 1 1 auto;
+    font-size: unset;
+  }
+
+
+  .home .slide-container .slide .image {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+}
+
+
+@media (max-width : 600px) {
+  
+  .home .slide-container .slide .content span {
+    font-size: 1rem;
+  }
+
+  .home .slide-container .slide .content h3 {
+    font-size: 2rem;
+  }
+
+  .home .slide-container .slide .content p {
+    font-size: 1rem;
+    color: #666;
+    padding: .5rem 0;
+  }
+
+  .home .slide-container .slide .image {
+    flex: 1 1 auto;
+  }
+
+  
+.home #prev,
+.home #next {
+  width: auto;
+}
+
+  
+}

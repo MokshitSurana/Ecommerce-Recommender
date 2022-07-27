@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="search-input">
+        <form action="recommendations" role="form" method="POST">
+            {% csrf_token %}
+            <a href="" target="_blank" hidden></a>
+
+            <input type="text" list="input" name="name" placeholder="Type to search Movie in our   ">
+
+            <datalist id="input"> {% for movie in movies %}
+                <option value="{{movie}}">{{movie}}</option>
+                {% endfor %}
+
+            </datalist>
+
+
+            <button type="submit" name="movie_name" class="icon"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</div>

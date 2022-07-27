@@ -1,0 +1,62 @@
+[
+    {
+        "filename": "C:/Users/Lenovo/Downloads/fashion-dataset/images/56670.jpg",
+        "image": "http://assets.myntassets.com/v1/images/style/properties/Maxima-Men-Black-Dial-Watch_c427a05e5f1d545b2b03ad86b4960427_images.jpg",
+        "productId": "56670",
+        "gender": "Men",
+        "masterCategory": "Accessories",
+        "subCategory": "Watches",
+        "articleType": "Watches",
+        "baseColour": "Black",
+        "season": "Winter",
+        "usage": "Casual",
+        "productDisplayName": "Maxima Men Black Dial Watch",
+        "seller": "maxima",
+        "id": "62e02d7c2d7a2040399f2df2"
+    },
+    {
+        "filename": "C:/Users/Lenovo/Downloads/fashion-dataset/images/36795.jpg",
+        "image": "http://assets.myntassets.com/v1/images/style/properties/1223bc5aa8de555c058dbafa61b4c6cf_images.jpg",
+        "productId": "36795",
+        "gender": "Men",
+        "masterCategory": "Accessories",
+        "subCategory": "Watches",
+        "articleType": "Watches",
+        "baseColour": "Silver",
+        "season": "Winter",
+        "usage": "Casual",
+        "productDisplayName": "Maxima Men Ssteele Silver Dial Watch",
+        "seller": "maxima",
+        "id": "62e02d7c2d7a2040399f2df9"
+    },
+    {
+        "filename": "C:/Users/Lenovo/Downloads/fashion-dataset/images/40527.jpg",
+        "image": "http://assets.myntassets.com/v1/images/style/properties/946643c653dae988057d427e72b4d5f6_images.jpg",
+        "productId": "40527",
+        "gender": "Men",
+        "masterCategory": "Accessories",
+        "subCategory": "Watches",
+        "articleType": "Watches",
+        "baseColour": "Gold",
+        "season": "Winter",
+        "usage": "Casual",
+        "productDisplayName": "Titan Men Gold Dial Watch",
+        "seller": "titan",
+        "id": "62e02d7c2d7a2040399f2dfb"
+    },
+    {
+        "filename": "C:/Users/Lenovo/Downloads/fashion-dataset/images/45869.jpg",
+        "image": "http://assets.myntassets.com/v1/images/style/properties/f0a2359518806948aa76a37b1c9fe2a9_images.jpg",
+        "productId": "45869",
+        "gender": "Men",
+        "masterCategory": "Accessories",
+        "subCategory": "Watches",
+        "articleType": "Watches",
+        "baseColour": "Brown",
+        "season": "Winter",
+        "usage": "Casual",
+        "productDisplayName": "Maxima Men Brown Dial Watch",
+        "seller": "maxima",
+        "id": "62e02d7c2d7a2040399f2dfd"
+    }
+]

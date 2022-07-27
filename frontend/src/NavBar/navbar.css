@@ -1,0 +1,14 @@
+.navbar.navbar-expand-lg.navbar-light{
+    background-color: var(--blue);;
+    color: #fff;
+    padding-inline: 1rem;
+}
+.navbar.navbar-expand-lg.navbar-light a{
+    color: #fff;
+}
+.navbar.navbar-expand-lg.navbar-light button{
+    color: #fff;
+    font-size: 1.6rem;
+    border: 2px solid #fff;
+    box-shadow: none;
+}

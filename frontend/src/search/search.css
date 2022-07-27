@@ -1,0 +1,12 @@
+.search-container{
+    padding: 1rem;
+    background: var(--grey);
+}
+.search-container .input-group{
+    display: flex;
+    justify-content: center;
+    /* width: 100vw; */
+}
+.search-container .input-group input{
+    width: 60vw;
+}
